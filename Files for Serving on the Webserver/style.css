@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: hsl(0, 0%, 25%);
+}
+
+#mapContainer{
+    position: relative;
+    display: flex;
+}
+
+#mapNav{
+    position: absolute;
+    margin: 7px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 25px;
+}
+
+.navBtn{
+    width: 25px;
+    height: 25px;
+    margin: 3px;
+    border-radius: 50%;
+    padding: 2px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: hsl(0, 0%, 95%);
+}
+
+.navBtn:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+
+.navBtn:active{
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 90%);
+    transform: translateY(-1px);
+}
+
+.navBtn:disabled{
+    color: hsl(0, 0%, 50%);
+    background-color: black;
+    cursor: not-allowed;
+}
+
+#map{
+    position: relative;
+    width: 2000px;
+    height: 2000px;
+    transition-property: none;
+    transition-duration: 1s;
+}
+
+#world{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    filter: contrast(30%) saturate(70%) brightness(150%);
+}
+
+.chicken{
+    position: absolute;
+    margin: 0px;
+}
+
+.chicken:hover{
+	z-index: 1;
+    border: 3px solid white;
+}
+
+.mostChicken{
+	z-index: 1;
+    border: 3px dashed white;
+}
+
+.scrollableMap{
+    height: 100vh;
+    width: 100vw;
+}
+
+.chicken .tooltip{
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(85, 85, 85, 0.671);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+  }
+
+  .chicken .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(85, 85, 85, 0.671) transparent transparent transparent;
+  }
+
+  .chicken:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+	pointer-events: none;
+  }
+
+  .player{
+    position: absolute;
+    display: flex;
+    margin: 0px;
+    transform-origin: 50% 50%;
+    transform: scale(1.5);
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .pTooltip{
+      position: absolute;
+      bottom: 120%;
+  }
+
+  #barometer{
+      position: fixed;
+      display: flex;
+      color: white;
+      width: 40px;
+      height: 80%;
+      background: linear-gradient(0deg, rgb(0, 0, 255),rgb(255, 0, 0));
+      right: 0;
+      margin: 2%;
+      top: 4%;
+      justify-content: center;
+    }
+
+    #baroMin{
+        align-self: end;
+        position: absolute;
+        margin: 15px;
+    }
+
+    #baroMax{
+        margin: 15px;
+    }
