@@ -30,7 +30,7 @@ A Bukkit-Plugin for displaying how many chickens you got at which place. This wi
 Now reload the plugins in the bukkit Server and open the `index.html`. You should see your base and all the chicken updating every 1 Sec.
 
 ## Only version 1.16.5? But I need another one...
-That is a bit unfortunate but if you know enough about plugin dev you can do that yourself! I left hopefully enough comments in the code, for figuering that out. I'll open up a issue here on github for adding different Version. If you implement them and you do a merge request I'll accept it and bing bang boom another use can use this plugin, who couldn't before. That would be sooooo cool! Like a real mini open source project!
+That is a bit unfortunate but if you know enough about plugin dev you can do that yourself! I left hopefully enough comments in the code, for figuering that out. I'll open up a issue here on github for adding different versions. If you implement them and you do a merge request I'll accept it and bing bang boom another use can use this plugin, who couldn't before. That would be sooooo cool! Like a real mini open source project!
 
 
 Alright that's everything, i hope you have fun with it!
