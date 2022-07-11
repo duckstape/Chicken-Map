@@ -20,13 +20,13 @@ A Bukkit-Plugin for displaying how many chickens you got at which place. This wi
 
 ## What about the GUI?
 **Requirements:**
-- you need a Webserver like Apache or NGINX up and running on the same machine the Bukkit Server runs ([tutorial for installing apache on linux](https://www.linuxshelltips.com/install-apache-in-linux/))
+- you need a Webserver like Apache or NGINX up and running on the same machine as the Bukkit Server is running ([tutorial for installing apache on linux](https://www.linuxshelltips.com/install-apache-in-linux/))
 - the Bukkit Server needs to be running on Minecraft version 1.16.5
 - everything inside the `Files for Serving on the Webserver` folder needs to be accessible through the Webserver (just like the index.html file from the tutorial)
 
 **What you should change in the code:**
 - `src/main/java/de/arthurkoch/ChickenMap2/ScanChickens.java`: change `dataDiscLocation` in line 34 to the directory where you put the content of the `Files for Serving on the Webserver` folder
-- `Files for Serving on the Webserver/script.js`: change the first three lines. Set the ingame coordinates for where the map sould open when the website is loaded, with `mcBasePosX` and `mcBasePosZ`. With `initalZoomFac` change how far the map should be zoomed in when the website is loaded (1 = one pixel is one block, 10 = ten pixels are one block)
+- `Files for Serving on the Webserver/script.js`: change the first three lines. Set the ingame coordinates to where the map should open when the website loads, with `mcBasePosX` and `mcBasePosZ`. With `initalZoomFac` change how far the map should be zoomed in when the website is loaded (1 = one pixel is one block, 10 = ten pixels are one block)
 
 ## Thats it!
 Now reload the plugins in the bukkit Server and open the `index.html`. You should see your base and all the chicken updating every 1 Sec.
